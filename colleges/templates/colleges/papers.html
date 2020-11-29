@@ -1,0 +1,26 @@
+{% extends "home/base.html" %}
+{% block content %}
+<p class="text-center">  {{view.kwargs.college_name | upper}} : {{view.kwargs.branch | title}} </p>
+<div class="data-table">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Link</th>
+                </tr>
+            </thead>
+            <tbody>
+           {% for college in colleges%}
+            <tr >
+                     <td >{{college.subject | title}}</th>
+                    <td >{{college.year}} - {{college.exam}}</th>
+                    
+                    <td> <a href="{{ college.pdf.url }}"> <button type="button" class="btn text-light">
+                        <i class="fa fa-download"></i>&nbsp Download</button> </a> </td>
+                </tr>
+            {% endfor %}
+</tbody>
+</table>
+        </div>
+{%endblock %}

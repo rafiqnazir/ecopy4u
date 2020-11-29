@@ -1,0 +1,20 @@
+{% extends "home/base.html" %}
+{% block content %}
+<div class="col-md-8 mx-auto">
+<h4 class="text-center">{{view.kwargs.college_name | upper}}</h4>
+<p class="text-muted text-center"> Check CSE for First Year Papers </p>
+    <div class="main-list">
+        <div class="container list-group text-dark">
+            
+           {% for college in colleges%}
+        <a href="{% url 'college-papers' college.college_name college.branch %}" class="list-group-item text-light mb-3">
+                <div class="col-sm" > 
+                    <h5 >{{ college.branch | title}} 
+                   
+            </h5></div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{%endblock %}

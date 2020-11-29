@@ -1,0 +1,65 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+<div class="box text-white text-center col-md-6  mx-auto mb-3">
+<h5 class="text-center m-1">Total Papers Available : <span class="count">{{ total}}</span></h5> <small> Views : {{views}}</small></h5>
+</div>
+
+<div class="row mx-auto">
+    <div class="col-md-4 mx-auto mb-3">
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'images/board.jpg'%}" alt="Boards" height="200px">
+  <div class="card-body">
+    <h5 class="card-title">Board Section</h5>
+    <p class="card-text">Visit this section, if you are a school student</p>
+    <a href="{% url 'boards' %}" class="btn text-light">Visit This Section</a>
+  </div>
+</div>
+</div>
+
+ <div class="col-md-4 mx-auto">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'images/college.jpg'%}" alt="Colleges" height="200px">
+  <div class="card-body">
+    <h5 class="card-title">College Section</h5>
+    <p class="card-text">Visit this section, if you are a college student.
+    </p>
+    <a href="{% url 'colleges' %}" class="btn text-light"> Visit This Section </a>
+  </div>
+</div>
+</div>
+</div>
+
+<!--
+<div class="row">
+    <div class="col-sm">
+
+<div class="sidebar">
+        <h2  class ="text-center">Boards</h2>
+        <p>This Section contains paper of variuos boards <br>
+            e.g : NCERT, CBSE, JKBOSE
+        </p>
+        <div class="text-center">
+        <a href="{% url 'boards' %}"  >
+        <button class="btn btn-lg text-light "> Visit This Section </button>
+    </a></div>
+</div>
+</div>
+
+<div class="col-sm">
+<div class="sidebar">
+        <h2 class="text-center">Colleges</h2>
+        <p >This Section contains paper of variuos colleges <br>
+            e.g : NIT Srinagar
+        </p>
+        <div class="text-center">
+        <a href="{% url 'colleges' %}">
+        <button class="btn btn-lg text-light" > Visit This Section </button>
+    </a>
+</div>
+    </div>
+</div>
+</div>
+-->
+{%endblock %}

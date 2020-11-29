@@ -1,0 +1,17 @@
+{% extends "home/base.html" %}
+{% block content %}
+<div class="col-md-8 mx-auto">
+<h3 class="text-center"> Select a College </h3>
+    <div class="main-list">
+        <div class="container list-group text-dark">
+           {% for college in colleges%}
+            <a href="{% url 'branches' college.college_name%}" class="list-group-item  mb-3 text-light">
+                <div class="col-sm" > 
+                    <h4>{{college.college_name | upper}} 
+                    </h4></div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{%endblock %}

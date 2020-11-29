@@ -1,0 +1,18 @@
+{% extends "home/base.html" %}
+{% block content %}
+<div class="col-md-8 mx-auto">
+<h3 class="text-center"> {{view.kwargs.board_name | upper}} </h3>
+    <div class="main-list">
+        <div class="container list-group text-dark">
+            
+           {% for board in boards%}
+        <a href="{% url 'board-papers' board.board_name board.class_number %}" class="list-group-item text-light mb-3">
+                <div class="col-sm" > 
+                    <h4>{{ board.class_number}}th
+            </h4></div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{%endblock %}
