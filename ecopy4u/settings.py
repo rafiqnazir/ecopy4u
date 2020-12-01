@@ -18,17 +18,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
+#See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = '3n$c2)th4ot#k2q2u^!9pq2=nwd-q7e3oia)c-pve$_%g7g#y#'
 
-SECRET_KEY=os.environ.get('secret-key')
+SECRET_KEY=os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecopy4u.herokuapp.com',]
+ALLOWED_HOSTS = ['ecopy4u.herokuapp.com']
 
 
 # Application definition
@@ -150,12 +150,12 @@ EMAIL_COURT=587
 EMAIL_USE_TLS= True
 
 
-EMAIL_HOST_USER=os.environ.get('EMAIL_USER')
-EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
+EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
 
-AWS_ACCESS_KEY_ID =os.environ.get('amazon-s3-id')
-AWS_SECRET_ACCESS_KEY = os.environ.get('amazon-s3-key')
-AWS_STORAGE_BUCKET_NAME=os.environ.get('amazon-s3-bucket-name')
+AWS_ACCESS_KEY_ID =os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME=os.environ.get('AWS_STORAGE_BUCKET_NAME')
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL=None
