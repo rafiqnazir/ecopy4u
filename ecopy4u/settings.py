@@ -43,8 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
-# 'storages',
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -149,11 +150,10 @@ EMAIL_USE_TLS= True
 EMAIL_HOST_USER=os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_PASSWORD')
 
-'''AWS_ACCESS_KEY_ID =os.environ.get('amazon-s3-id')
+AWS_ACCESS_KEY_ID =os.environ.get('amazon-s3-id')
 AWS_SECRET_ACCESS_KEY = os.environ.get('amazon-s3-key')
-AWS_STORAGE_BUCKET_NAME=os.environ.get('amazon-s3-bucket')
+AWS_STORAGE_BUCKET_NAME=os.environ.get('amazon-s3-bucket-name')
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL=None
 DEFAULT_FILE_STORAGE= 'storages.backends.s3boto3.S3Boto3Storage'
-'''
