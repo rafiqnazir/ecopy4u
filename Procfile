@@ -1,0 +1,1 @@
+web: gunicorn ecopy4u.wsgi
