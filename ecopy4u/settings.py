@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'ecopy4u.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-'''
+
 DATABASES = {
 "default": {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -92,10 +92,18 @@ DATABASES = {
 }
 }
 '''
-DATABASES={
-    "default":dj_database_url.config()
-}
 
+DATABASES={
+    "default":{
+    'ENGINE':'django.db.backends.postgresql_psycopg2',
+    'NAME':'ecopy4u',
+    'USER':'postgres',
+    'PASSWORD':'rafiq_nazir',
+    'HOST':'localhost',
+    'PORT':'5432',
+    }
+}
+'''
 '''
 import dj_database_url
 DATABASES = {
