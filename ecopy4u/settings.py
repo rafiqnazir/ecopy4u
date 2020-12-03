@@ -84,13 +84,14 @@ WSGI_APPLICATION = 'ecopy4u.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+'''
 DATABASES = {
 "default": {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
 }
 }
+'''
 '''
 DATABASES={
     "default":{
@@ -185,9 +186,7 @@ AWS_S3_REGION_NAME = 'us-east-2'
 
 
 django_heroku.settings(locals())
-'''
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)'''
-if 'DATABASE_URL' in os.environ:
-    import dj_database_url
-    DATABASES = {'default': dj_database_url.config()}
+#import dj_database_url
+#DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)'''
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(conn_max_age=600
