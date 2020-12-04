@@ -5,14 +5,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
-from home.models import views
+# from home.models import views
 from django.shortcuts import redirect
 from django.db import IntegrityError
 
 class BoardList(ListView):
-	Views=views.objects.first()
-	Views.boards += 1
-	Views.save()
+	# Views=views.objects.first()
+	# Views.boards += 1
+	# Views.save()
 	model = boards
 	template_name = "boards/boards.html"
 	context_object_name = "boards"
@@ -37,9 +37,9 @@ class ClassList(ListView):
 		return boards.objects.filter(board_name=board,valid=True).values('class_number','board_name').distinct().order_by('class_number')
 
 class PaperList(ListView):
-	Views=views.objects.first()
-	Views.downloads += 1
-	Views.save()
+	# Views=views.objects.first()
+	# Views.downloads += 1
+	# Views.save()
 	model = boards
 	template_name = "boards/papers.html"
 	allow_empty=False

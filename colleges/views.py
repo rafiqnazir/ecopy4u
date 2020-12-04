@@ -5,14 +5,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
-from home.models import views
+# from home.models import views
 from django.shortcuts import redirect
 from django.db import IntegrityError
 
 class CollegeList(ListView):
-	Views=views.objects.first()
-	Views.colleges += 1
-	Views.save()
+	# Views=views.objects.first()
+	# Views.colleges += 1
+	# Views.save()
 	model = colleges
 	template_name = "colleges/colleges.html"
 	context_object_name = "colleges"
@@ -34,9 +34,9 @@ class BranchList(ListView):
 		college=self.kwargs.get('college_name')
 		return colleges.objects.filter(college_name=college,valid=True).values('branch','college_name').distinct().order_by('branch')
 class PaperList(ListView):
-	Views=views.objects.first()
-	Views.downloads += 1
-	Views.save()
+	# Views=views.objects.first()
+	# Views.downloads += 1
+	# Views.save()
 	model = colleges
 	template_name = "colleges/papers.html"
 	allow_empty=False

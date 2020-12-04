@@ -85,12 +85,12 @@ WSGI_APPLICATION = 'ecopy4u.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-"default": {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-}
-}
+# DATABASES = {
+# "default": {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+# }
+# }
 '''
 DATABASES={
     "default":{
@@ -146,7 +146,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-#STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 
 # Crispy Form by desfault uses bootstrap 2
@@ -172,7 +172,7 @@ EMAIL_USE_TLS= True
 EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
 
-'''AWS_ACCESS_KEY_ID =os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_ID =os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME=os.environ.get('AWS_STORAGE_BUCKET_NAME')
 
@@ -186,4 +186,4 @@ AWS_S3_REGION_NAME = 'us-east-2'
 
 django_heroku.settings(locals())
 import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)'''
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
