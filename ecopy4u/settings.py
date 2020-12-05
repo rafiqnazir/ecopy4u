@@ -92,17 +92,21 @@ DATABASES = {
 }
 >>>>>>> c37492df054af3897bc941bed2e043738bd49a65
 '''
-'''
-DATABASES={
+if os.environ.get('DEBUG_VALUE'):
+    DATABASES={
     "default":{
     'ENGINE':'django.db.backends.postgresql_psycopg2',
-    'NAME':'postgres',
+    'NAME':'django',
     'USER':'postgres',
-    'PASSWORD':'postgres',
+    'PASSWORD':'rafiq',
     'HOST':'localhost',
     'PORT':'5432',
     }
-}
+    }
+else:
+    DATABASES = {}
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+'''
 import dj_database_url
 DATABASES = {
     "default": dj_database_url.config(conn_max_age=600, default="sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3"))
@@ -189,5 +193,5 @@ django_heroku.settings(locals())
 #import dj_database_url
 #DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)'''
 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+# DATABASES = {}
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
