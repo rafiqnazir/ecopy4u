@@ -9,7 +9,7 @@ class boards(models.Model):
     class_number=models.IntegerField()
     subject = models.CharField(max_length=50)
     year = models.IntegerField(default=2020)
-    sereis= models.CharField(max_length=10)
+    series= models.CharField(max_length=10)
     pdf = models.FileField(upload_to='pdf')
     contributor=models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
     valid=models.BooleanField(default=False)
@@ -22,7 +22,7 @@ class boards(models.Model):
         return reverse('home')
 
     def __str__(self):
-        return self.board_name + ' - ' + str(self.class_number) + ' - ' + self.subject + ' - ' + str(self.valid)
+        return self.board_name + ' - ' + str(self.class_number) + ' - ' + self.subject + ' - ' + str(self.year) + ' - ' + str(self.valid)
 
     def save(self, *args, **kwargs):
         self.board_name = self.board_name.lower()

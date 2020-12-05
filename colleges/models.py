@@ -4,17 +4,17 @@ from django.urls import reverse
 
 class colleges(models.Model):
     type= [("minor", "Minor"), ("major", "Major")] 
-    Branch=[ 
-    ("Chemical Engineering" , "Chemical Engineering") ,
-    ("Civil Engineering" , "Civil Engineering") , 
-    ("Computer Science Engineering" , "Computer Science Engineering"),
-    ("Electrical Engineering" , "Electrical Engineering") ,
-    ("Electronics Engineering" , "Electronics Engineering"),
-    ("Mechanical Engineering" , "Mechanical Engineering"),
-    ("Metallurgical Engineering" , "Metallurgical Engineering"),
-    ("Information & Technology" , "Information & Technology")]
+    # Branch=[ 
+    # ("Chemical Engineering" , "Chemical Engineering") ,
+    # ("Civil Engineering" , "Civil Engineering") , 
+    # ("Computer Science Engineering" , "Computer Science Engineering"),
+    # ("Electrical Engineering" , "Electrical Engineering") ,
+    # ("Electronics Engineering" , "Electronics Engineering"),
+    # ("Mechanical Engineering" , "Mechanical Engineering"),
+    # ("Metallurgical Engineering" , "Metallurgical Engineering"),
+    # ("Information & Technology" , "Information & Technology")]
     college_name = models.CharField(max_length=50,default="NIT Srinagar")
-    branch = models.CharField(max_length=50,choices=Branch)
+    branch = models.CharField(max_length=50)
     subject= models.CharField(max_length=50)
     year = models.IntegerField(default=2020)
     exam=models.CharField(max_length=20,choices=type,default="major")
