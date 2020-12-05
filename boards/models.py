@@ -16,7 +16,7 @@ class boards(models.Model):
 
     class Meta:
         constraints = [
-        models.UniqueConstraint(fields=["board_name", "class_number","subject", "year","sereis"], name='unique board')]
+        models.UniqueConstraint(fields=["board_name", "class_number","subject", "year","series"], name='unique board')]
     #when new board paper is created , where to redirect
     def get_absolute_url(self):
         return reverse('home')

@@ -17,7 +17,7 @@ class BoardList(ListView):
 	template_name = "boards/boards.html"
 	context_object_name = "boards"
 	allow_empty=False
-	#ordering=['board_name','class_number','subject','-year','sereis']
+	#ordering=['board_name','class_number','subject','-year','series']
 	# No of Contents/rows per page
 	paginate_by=20
 	def get_queryset(self):
@@ -54,7 +54,7 @@ class PaperList(ListView):
 	
 class BoardPaperCreate(LoginRequiredMixin,SuccessMessageMixin,CreateView):
 	model=boards
-	fields = ['board_name','class_number','subject','year','sereis','pdf']
+	fields = ['board_name','class_number','subject','year','series','pdf']
 
 	def post(self, request, *args, **kwargs):
 		# super().post() maybe raise a ValidationError if it is failure to save
