@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://ecopy4u.herokuapp.com/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/login/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/register/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/boards/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/login/?next=/boards/new/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/login/?next=/colleges/new/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/password-reset/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/boards/jkbose/class/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/branch/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/boards/jkbose/8/paper/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/boards/jkbose/10/paper/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/civil%20engineering/paper/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/computer%20science%20engineering/paper/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/computer%20science%20engineering%20first-sem/paper/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/information%20&amp;%20technology/paper/</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/computer%20science%20engineering/paper/?page=1</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/computer%20science%20engineering/paper/?page=2</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/computer%20science%20engineering/paper/.?page=2</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/information%20&amp;%20technology/paper/?page=1</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/information%20&amp;%20technology/paper/?page=2</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/information%20&amp;%20technology/paper/.?page=2</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/computer%20science%20engineering/paper/.?page=1</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://ecopy4u.herokuapp.com/colleges/nit%20srinagar/information%20&amp;%20technology/paper/.?page=1</loc>
+  <lastmod>2020-12-05T10:51:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>
