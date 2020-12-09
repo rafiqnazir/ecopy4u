@@ -25,6 +25,7 @@ button{
   text-decoration-color: white;
 }
 body{
+  background-color: white;
   object-fit: fill;
 }
 @media (prefers-color-scheme: dark) {
