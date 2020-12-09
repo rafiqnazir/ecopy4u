@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
 #from django.contrib.auth.forms import UserCreationForm
-
+from django.core.mail import EmailMessage
 from django.contrib import messages
 from .forms import UserRegistrationForm,UserUpdateForm,ProfileUpdateForm
 
@@ -10,6 +10,16 @@ def register(request):
         form=UserRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
+            username=form.cleaned_data.get('username')
+            # email=form.cleaned_data.get('email')
+            # email_subject=f'username , "Activate Your Account!!!"'
+            # email_body="This is a Confirmation email from ecopy4u"
+            # email = EmailMessage(
+            #     'Hello',
+            #     email_subject,
+            #     email_body,
+            #     [email]
+            # )
             username=form.cleaned_data.get('username')
             messages.success(request,f'Account created for {username}!!!')
             return redirect('login')
@@ -40,3 +50,15 @@ def profile(request):
         'p_form' : p_form,
     }
     return render(request,'users/profile.html',context)
+
+
+
+
+# email_subject=f'username , "Activate Your Account!!!"'
+# email_body="This is a Confirmation email from ecopy4u"
+# email = EmailMessage(
+#     'Hello',
+#     email_subject,
+#     email_body,
+#     [email]
+# )
