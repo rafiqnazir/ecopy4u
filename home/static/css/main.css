@@ -1,86 +1,4 @@
 
-/*
-nav.hello{
-  background-color: lightgrey;
-}
-div.col-sm{
-font-size:1.4em;
-padding: 10px;
-border-radius:5px; 
-}
-.sidebar {
-  background: #ffffff;
-  padding: 10px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 3px solid blue; 
-  margin-bottom: 20px;
-
-}
-.sidebar ul li{
-  margin-bottom: 10px;
-}
-
-div.col-sm{
-font-size:1.4em;
-padding: 10px;
-border-radius:5px; 
-} 
-div.col-sm a:hover{
-  color:black;
-  background-color: lightgrey;
-}
-.main-list h1{
-  width:100%;
-  text-align: center;
-  padding: 20px 0px 0px 10px;
-}
-.main-list .container .row .col-sm{
-  padding:10px;
-}
-.main-list .container .row{
-  padding-left: 20px;
-}
-div.data-table{
-  background-color: white;
-  }
-table {
-  border: 1px solid black;
-  text-align: center;
-}
-.main-heading{
-  color: grey;
-}
-button.btn-lightgrey{
-  background-color: lightgrey;
-}
-tr a button{
-  margin-bottom: 10px;
-}
-.table-hover tbody tr:hover {
-  color: white;
-  background-color: lightgrey;
-}
-button:active {
-  transform: translateY(4px);
-}
-a:active{
-    transform: translateY(4px);
-}
-a.grey:hover{
-  background-color: grey;
-}
-button.btn-lightgrey:hover{
-  background-color: grey;
-}
-.navbar-brand{
-  font-family: 'Satisfy',cursive;
-}
-footer a:hover{
-  text-decoration: none;
-}
-a button{
-  background-color:#008080;
-}*/
 button.btn,list-group-item{
   background-color:#008080;
   text-decoration-color: white;
@@ -108,4 +26,9 @@ button{
 }
 body{
   object-fit: fill;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: white;
+  }
 }
