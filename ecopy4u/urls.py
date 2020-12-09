@@ -19,6 +19,16 @@ from users import views as user_views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import BoardsSitemap, CollegesSitemap,StaticViewSitemap
+
+sitemaps = {
+    'posts': BoardsSitemap,
+    'static': StaticViewSitemap,
+    'boards': CollegesSitemap,
+}
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
@@ -36,6 +46,8 @@ urlpatterns = [
         'users/password_reset_confirm.html' ) ,name="password_reset_confirm"),
     path('password-reset-complete/',auth_views.PasswordResetCompleteView.as_view(template_name=
         'users/password_reset_complete.html' ) ,name="password_reset_complete"),
+
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
 
 
 ]
