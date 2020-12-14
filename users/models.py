@@ -10,9 +10,10 @@ class Profile(models.Model):
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     institute = models.CharField(max_length=100)
     stream = models.CharField(max_length=50)
+    date   = models.DateField(auto_now_add=True,auto_now=False,null=True)
 
     def __str__(self):
-        return f'{self.user.username} Profile'
+        return f'{self.user.username} Profile {self.date}'
 
     ''' def save(self, *args, **kwargs):
         super().save( *args, **kwargs)

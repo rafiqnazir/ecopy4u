@@ -22,6 +22,7 @@ class colleges(models.Model):
     pdf = models.FileField(upload_to='colleges')
     contributor=models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
     valid=models.BooleanField(default=False)
+    date=models.DateField(auto_now_add=True,auto_now=False,null=True)
 
     class Meta:
         unique_together=['college_name','branch','subject','year','exam']
@@ -31,7 +32,7 @@ class colleges(models.Model):
         return reverse('home')
 
     def __str__(self):
-        return self.college_name + ' - ' + str(self.branch) + ' - ' + str(self.subject) + '-'+ str(self.year) + ' - ' + self.exam + '-' + str(self.valid)
+        return self.college_name + ' - ' + str(self.branch) + ' - ' + str(self.subject) + '-'+ str(self.year) + ' - ' + self.exam + '-' + str(self.valid) + ' ' + str(self.date)
 
     def save(self, *args, **kwargs):
         self.college_name = self.college_name.lower()

@@ -13,6 +13,7 @@ class boards(models.Model):
     pdf = models.FileField(upload_to='pdf')
     contributor=models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
     valid=models.BooleanField(default=False)
+    date=models.DateField(auto_now_add=True,auto_now=False,null=True)
 
     class Meta:
         constraints = [
@@ -22,7 +23,7 @@ class boards(models.Model):
         return reverse('home')
 
     def __str__(self):
-        return self.board_name + ' - ' + str(self.class_number) + ' - ' + self.subject + ' - ' + str(self.year) + ' - ' + str(self.valid)
+        return  self.board_name + ' - ' + str(self.class_number) + ' - ' + self.subject + ' - ' + str(self.year) + ' - ' + str(self.valid) + ' ' + str(self.date)
 
     def save(self, *args, **kwargs):
         self.board_name = self.board_name.lower()

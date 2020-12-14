@@ -1,9 +1,10 @@
-
-{% extends "home/base.html" %}
+{% extends "users/form_base.html" %}
 {%load crispy_forms_tags%}
 {%block content%}
+<div class="row" >
+    <div class="col-md-8 mx-auto">
    
-    <form  method="post">
+    <form  class="w-50 mx-auto" method="post">
         {% csrf_token %}
         <fieldset class="form-group">
             <legend class=""border-bottom mb-4"> Let's Join Us </legend>
@@ -13,10 +14,12 @@
             <button class="btn btn-outline-info text-light" type="submit"> Sign Up</button>
         </div>
     </form>
-    <div class="border-top pt-3">
+    <div class=" w-50 mx-auto border-top pt-3">
         <small class="text-muted">
             Already Have An Account <a class="ml-2" href="{% url 'login' %}">
             <button class="btn btn-outline-info text-light">Log In </button> </a>
         </small>
+    </div>
+    </div>
     </div>
 {% endblock %}

@@ -1,9 +1,11 @@
-{% extends "home/base.html" %}
+{% extends "users/form_base.html" %}
 {%load static%}
 {%load crispy_forms_tags%}
 {%block content%}
+<div class="row" >
+    <div class="col-md-8 mx-auto">
 
-    <form  method="post"  enctype="multipart/form-data">
+    <form  class="w-50 mx-auto" method="post"  enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset class="form-group">
             <legend class="text-center border-bottom mb-4"> Add a College Paper </legend>
@@ -13,4 +15,6 @@
             <button class="btn btn-outline-info text-light" type="submit"> Create</button>
         </div>
     </form>
+    </div>
+    </div>
 {% endblock %}
