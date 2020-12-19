@@ -60,6 +60,11 @@
           </div>
         </div>
       <br>
+      {% if user.is_superuser%}
+      <a href="{% url 'mail_users' %}">
+        <button class="btn-lg bg-dark"> Mail The Users </button>
+        </a>
+        {%endif%}
       <hr>
       <div class="row mx-auto">
         <div class="col-md-4 mx-auto">
@@ -79,5 +84,6 @@
 </div>
 </div>
 </div>
+
 
 {% endblock %}

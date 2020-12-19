@@ -1,8 +1,14 @@
 {% extends "users/form_base.html" %}
 {%load crispy_forms_tags%}
 {%block content%}
+
 <div class="row" >
     <div class="col-md-8 mx-auto">
+        {% if user.is_authenticated %}
+        <div class="text-center alert ">
+            <h3>You are already registered !!!</h3>
+        </div>        
+        {% else %}
    
     <form  class="w-50 mx-auto" method="post">
         {% csrf_token %}
@@ -20,6 +26,7 @@
             <button class="btn btn-outline-info text-light">Log In </button> </a>
         </small>
     </div>
-    </div>
-    </div>
+    {%endif%}
+</div>
+</div>
 {% endblock %}

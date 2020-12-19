@@ -46,10 +46,8 @@ urlpatterns = [
         'users/password_reset_confirm.html' ) ,name="password_reset_confirm"),
     path('password-reset-complete/',auth_views.PasswordResetCompleteView.as_view(template_name=
         'users/password_reset_complete.html' ) ,name="password_reset_complete"),
-
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
-
-
+    path('mail_users/',user_views.mail_users ,name="mail_users"),
+    path('sitemap.xml/', sitemap, {'sitemaps': sitemaps}),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
