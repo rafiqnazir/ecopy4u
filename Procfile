@@ -1,1 +1,1 @@
-web: gunicorn ecopy4u.wsgi
+web: gunicorn ecopy4u.wsgi --timeout 0
