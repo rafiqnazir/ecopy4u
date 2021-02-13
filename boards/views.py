@@ -52,7 +52,7 @@ class PaperList(ListView):
 		return boards.objects.filter(board_name=board,class_number=Class,valid=True).order_by('subject','-year')
 
 	
-class BoardPaperCreate(LoginRequiredMixin,SuccessMessageMixin,CreateView):
+class BoardPaperCreate(SuccessMessageMixin,CreateView):
 	model=boards
 	fields = ['board_name','class_number','subject','year','series','pdf']
 
@@ -66,12 +66,13 @@ class BoardPaperCreate(LoginRequiredMixin,SuccessMessageMixin,CreateView):
 		return response
 
 	def form_valid(self,form):
-	    form.instance.contributor= self.request.user
-	    # messages.success(request,f'Congratulations!!! Your paper has been added')
-	    try:
-	    	return super().form_valid(form)
-	    except IntegrityError:
-	    	return redirect('college-paper-create')
+		if (self.request.user.is_authenticated):
+			form.instance.contributor= self.request.user
+		# messages.success(request,f'Congratulations!!! Your paper has been added')
+		try:
+			return super().form_valid(form)
+		except IntegrityError:
+			return redirect('college-paper-create')
    
 
 

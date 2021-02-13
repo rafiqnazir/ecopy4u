@@ -48,7 +48,7 @@ class PaperList(ListView):
 		college=self.kwargs.get('college_name')
 		return colleges.objects.filter(college_name=college,branch=Branch,valid=True).order_by('subject','-year')
 
-class CollegePaperCreate(LoginRequiredMixin,SuccessMessageMixin,CreateView):
+class CollegePaperCreate(SuccessMessageMixin,CreateView):
 	model=colleges
 	fields = ['college_name','branch','subject','year','exam','pdf']
 	def post(self, request, *args, **kwargs):
@@ -61,9 +61,11 @@ class CollegePaperCreate(LoginRequiredMixin,SuccessMessageMixin,CreateView):
 		return response
 
 	def form_valid(self,form):
-	    form.instance.contributor= self.request.user
+		if (self.request.user.is_authenticated):
+			form.instance.contributor= self.request.user
+
 	    # messages.success(request,f'Congratulations!!! Your paper has been added')
-	    try:
-	    	return super().form_valid(form)
-	    except IntegrityError:
-	    	return redirect('college-paper-create')
+		try:
+			return super().form_valid(form)
+		except IntegrityError:
+			return redirect('college-paper-create')

@@ -22,7 +22,7 @@ def register(request):
 
             form.save()
             email_subject=("Welcome to E-copy4u")
-            email_body=("Hello " + username + " , Your account has been created at ecopy4u!!!.\nHere is the link of the website:\n https://ecopy4u.herokuapp.com/")
+            email_body=("\t Hello " + username + " ,\n Your account has been Successfully created at ecopy4u!!!.\nHere is the link of the website:\n https://ecopy4u.herokuapp.com/")
             Mail = EmailMessage(
                 email_subject,
                 email_body,
