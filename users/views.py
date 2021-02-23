@@ -67,22 +67,27 @@ from colleges.models import colleges
 @login_required
 def mail_users(request):
     if request.user.is_superuser:
-        users = User.objects.all()
-        total=boards.objects.count()+colleges.objects.count()
-        for user in users:
-            email=user.email
-            username=user.username
-            email_subject=(f'Greetings From E-copy4u')
-            string="\nHere is the link of the website:\n https://ecopy4u.herokuapp.com/"
-            name=(f'Hello , {username} \n')
-            email_body=(name + f"We have a total of {total} Papers. With your contribution, we can make much more papers available to students. Have a Nice Day" + string)
-            Mail = EmailMessage(
-                email_subject,
-                email_body,
-                'noreply@semy.com',
-                [email]
-            )
-            Mail.send()
+        Colleges=colleges.objects.all()
+        # for x in Colleges:
+        #     print(x)
+        #     x.subject = x.subject + '-' + str(x.exam)
+        #     x.save()
+        # users = User.objects.all()
+        # total=boards.objects.count()+colleges.objects.count()
+        # for user in users:
+        #     email=user.email
+        #     username=user.username
+        #     email_subject=(f'Greetings From E-copy4u')
+        #     string="\nHere is the link of the website:\n https://ecopy4u.herokuapp.com/"
+        #     name=(f'Hello , {username} \n')
+        #     email_body=(name + f"We have a total of {total} Papers. With your contribution, we can make much more papers available to students. Have a Nice Day" + string)
+        #     Mail = EmailMessage(
+        #         email_subject,
+        #         email_body,
+        #         'noreply@semy.com',
+        #         [email]
+        #     )
+        #     Mail.send()
     return render(request,'home/home.html')
 
 

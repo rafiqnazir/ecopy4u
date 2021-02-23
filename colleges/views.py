@@ -50,7 +50,8 @@ class PaperList(ListView):
 
 class CollegePaperCreate(SuccessMessageMixin,CreateView):
 	model=colleges
-	fields = ['college_name','branch','subject','year','exam','pdf']
+	# fields = ['college_name','branch','subject','year','exam','pdf']
+	fields = ['college_name','branch','subject','year','pdf']
 	def post(self, request, *args, **kwargs):
 		# super().post() maybe raise a ValidationError if it is failure to save
 		response = super().post(request, *args, **kwargs)

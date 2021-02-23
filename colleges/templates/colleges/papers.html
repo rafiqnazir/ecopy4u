@@ -14,7 +14,7 @@
            {% for college in colleges%}
             <tr >
                      <td >{{college.subject | title}}</th>
-                    <td >{{college.year}} - {{college.exam}}</th>
+                    <td >{{college.year}}</th>
                     
                     <td> <a href="{{ college.pdf.url }}"> <button type="button" class="btn text-light">
                         <i class="fa fa-download"></i>&nbsp Download</button> </a> </td>
